@@ -1,4 +1,5 @@
 ﻿using Common;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,14 @@ namespace Models
 {
     public class Employee
     {
-        public string First_Name { get; set; }
-        public string Last_Name { get; set; }
-        public DateTime DOB { get; set; }
-        public Gender Gender { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string FullName { get; set; }
+        [JsonProperty(PropertyName = "salary")]
+        public int Salary { get; set; }
+        [JsonProperty(PropertyName = "age")]
+        public int Age { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public int Id { get; set; }
+
     }
 }

@@ -4,8 +4,8 @@
 
 Scenario: Add an Employee
 	Given I have the following employee:
-	| FirstName | LastName | DOB        | Gender |
-	| Edwin     | Nwosisi  | 1991/08/27 | Male   |
-	| Nicola    | Owen     | 1990/06/11 | Female |
+	| Id | FullName      | Age | Salary |
+	| 1  | Edwin Nwosisi | 27  | 400    |
+	| 2  | Nicola Owen   | 28  | 200    |
 	When I post employee to the api
 	Then I verify that the request was successful

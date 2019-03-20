@@ -1,5 +1,7 @@
 ﻿using Common.Service;
 using Models;
+using NUnit.Framework;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +27,19 @@ namespace Specflow
         [When(@"I post employee to the api")]
         public void WhenIPostEmployeeToTheApi()
         {
-            ScenarioContext.Current.Pending();
+            var restService = new RestService();
+            foreach (var emp in _employees)
+            {
+               var response = restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp));
+                Assert.That(response.IsSuccessful);
+            }
+            
         }
 
         [Then(@"I verify that the request was successful")]
         public void ThenIVerifyThatTheRequestWasSuccessful()
         {
-          //  ScenarioContext.Current.Pending();
+            
         }
 
     }

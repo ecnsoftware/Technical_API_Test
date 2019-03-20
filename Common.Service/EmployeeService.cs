@@ -18,10 +18,11 @@ namespace Common.Service
             {
                 employees.Add(new Employee
                 {
-                    First_Name = row["FirstName"],
-                    Last_Name = row["LastName"],
-                    DOB = DateTime.ParseExact(row["DOB"], "yyyy/MM/dd", System.Globalization.CultureInfo.InvariantCulture),
-                    Gender = (Gender)Enum.Parse(typeof(Gender), row["Gender"], true)
+                    Id = Int32.Parse(row["Id"]),
+                    FullName = row["FullName"],
+                    Salary = Int32.Parse(row["Salary"]),
+                    Age = Int32.Parse(row["Age"])
+
                 });             
 
             }

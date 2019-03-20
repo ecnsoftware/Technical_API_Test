@@ -79,20 +79,20 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "FirstName",
-                        "LastName",
-                        "DOB",
-                        "Gender"});
+                        "Id",
+                        "FullName",
+                        "Age",
+                        "Salary"});
             table1.AddRow(new string[] {
-                        "Edwin",
-                        "Nwosisi",
-                        "1991/08/27",
-                        "Male"});
+                        "1",
+                        "Edwin Nwosisi",
+                        "27",
+                        "400"});
             table1.AddRow(new string[] {
-                        "Nicola",
-                        "Owen",
-                        "1990/06/11",
-                        "Female"});
+                        "2",
+                        "Nicola Owen",
+                        "28",
+                        "200"});
 #line 6
  testRunner.Given("I have the following employee:", ((string)(null)), table1, "Given ");
 #line 10
