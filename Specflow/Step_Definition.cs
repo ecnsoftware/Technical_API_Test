@@ -31,7 +31,7 @@ namespace Specflow
         [Then(@"I verify that the request was successful")]
         public void ThenIVerifyThatTheRequestWasSuccessful()
         {
-            ScenarioContext.Current.Pending();
+          //  ScenarioContext.Current.Pending();
         }
 
     }
