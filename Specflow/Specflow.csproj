@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StepDefinitionHelper.cs" />
     <Compile Include="Step_Definition.cs" />
     <Compile Include="Employee.feature.cs">
       <AutoGen>True</AutoGen>

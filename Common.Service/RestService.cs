@@ -22,6 +22,14 @@ namespace Common.Service
             
         }
 
+        public IRestResponse DeleteEmployee(int id)
+        {
+            _restRequest = new RestRequest(Method.DELETE);
+            RestClient restClient = new RestClient($"{EndPoints.DeleteEmployeeEndpoint}/{id}");
+            _restRequest.AddParameter("undefined", ParameterType.UrlSegment);
+            return _restResponse = RestServiceHelper.Execute(restClient, _restRequest);
+        }
+
 
 
 

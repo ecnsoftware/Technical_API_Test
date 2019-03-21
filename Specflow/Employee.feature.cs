@@ -85,7 +85,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Salary"});
             table1.AddRow(new string[] {
                         "1",
-                        "Edwin Nwosisi",
+                        "George Nwosisi",
                         "27",
                         "400"});
             table1.AddRow(new string[] {

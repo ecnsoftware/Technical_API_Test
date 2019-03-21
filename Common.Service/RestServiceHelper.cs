@@ -16,6 +16,9 @@ namespace Common.Service
 
         public  static IRestResponse Execute(RestClient restClient, RestRequest restRequest)
             => restClient.Execute(restRequest);
+
+        public static T DeserializeJson<T>( string response) 
+            => JsonConvert.DeserializeObject<T>(response);
         
     }
 }

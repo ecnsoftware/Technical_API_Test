@@ -28,10 +28,11 @@ namespace Specflow
         public void WhenIPostEmployeeToTheApi()
         {
             var restService = new RestService();
+            var helper = new StepDefinitionHelper();
             foreach (var emp in _employees)
-            {
-               var response = restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp));
-                Assert.That(response.IsSuccessful);
+             {
+               var deserialized = helper.DeserializeJsonToObject<Employee>(restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp)));
+                restService.DeleteEmployee(deserialized.Id);
             }
             
         }
