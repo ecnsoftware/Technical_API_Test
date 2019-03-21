@@ -16,6 +16,8 @@ namespace Specflow
     public class Step_Definition
     {
         private static IEnumerable<Employee> _employees;
+        private static bool isSuccessfull;
+
         [Given(@"I have the following employee:")]
         public void GivenIHaveTheFollowingEmployee(Table table)
         {
@@ -32,7 +34,9 @@ namespace Specflow
             foreach (var emp in _employees)
              {
                var deserialized = helper.DeserializeJsonToObject<Employee>(restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp)));
-                restService.DeleteEmployee(deserialized.Id);
+               var response = restService.DeleteEmployee(deserialized.Id);
+                isSuccessfull = response.IsSuccessful;
+
             }
             
         }
@@ -40,7 +44,7 @@ namespace Specflow
         [Then(@"I verify that the request was successful")]
         public void ThenIVerifyThatTheRequestWasSuccessful()
         {
-            
+            Assert.That(isSuccessfull);
         }
 
     }
