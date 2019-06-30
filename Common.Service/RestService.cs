@@ -16,13 +16,14 @@ namespace Common.Service
         public IRestResponse MakePostRequest(string jsonString)
         {
             _restRequest = new RestRequest(Method.POST);
+            _restRequest.AddHeader("Content-Type", "application/json");
             RestClient restClient = new RestClient(EndPoints.CreateEmployeeEndpoint);
             _restRequest.AddParameter("undefined", jsonString, ParameterType.RequestBody);
            return _restResponse = RestServiceHelper.Execute(restClient, _restRequest);
             
         }
 
-        public IRestResponse DeleteEmployee(int id)
+        public IRestResponse DeleteEmployee(string id)
         {
             _restRequest = new RestRequest(Method.DELETE);
             RestClient restClient = new RestClient($"{EndPoints.DeleteEmployeeEndpoint}/{id}");

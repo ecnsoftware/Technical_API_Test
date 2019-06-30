@@ -18,10 +18,9 @@ namespace Common.Service
             {
                 employees.Add(new Employee
                 {
-                    Id = Int32.Parse(row["Id"]),
                     FullName = row["FullName"],
-                    Salary = Int32.Parse(row["Salary"]),
-                    Age = Int32.Parse(row["Age"])
+                    Salary = row["Salary"],
+                    Age = row["Age"]
 
                 });             
 

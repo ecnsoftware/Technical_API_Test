@@ -85,12 +85,12 @@ this.ScenarioInitialize(scenarioInfo);
                         "Salary"});
             table1.AddRow(new string[] {
                         "1",
-                        "George Nwosisi",
+                        "Georgee",
                         "27",
                         "400"});
             table1.AddRow(new string[] {
                         "2",
-                        "Nicola Owen",
+                        "Nicola",
                         "28",
                         "200"});
 #line 6
@@ -106,3 +106,4 @@ this.ScenarioInitialize(scenarioInfo);
 }
 #pragma warning restore
 #endregion
+

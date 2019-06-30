@@ -13,11 +13,11 @@ namespace Models
         [JsonProperty(PropertyName = "name")]
         public string FullName { get; set; }
         [JsonProperty(PropertyName = "salary")]
-        public int Salary { get; set; }
+        public string Salary { get; set; }
         [JsonProperty(PropertyName = "age")]
-        public int Age { get; set; }
-        [JsonProperty(PropertyName = "id")]
-        public int Id { get; set; }
+        public string Age { get; set; }
+       // [JsonIgnore]
+        public string Id { get; set; }
 
     }
 }
