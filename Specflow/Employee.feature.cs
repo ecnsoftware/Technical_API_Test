@@ -70,10 +70,10 @@ namespace Specflow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add an Employee")]
-        public virtual void AddAnEmployee()
+        [NUnit.Framework.DescriptionAttribute("Add Employees to database")]
+        public virtual void AddEmployeesToDatabase()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an Employee", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Employees to database", null, ((string[])(null)));
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

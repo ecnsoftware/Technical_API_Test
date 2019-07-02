@@ -2,7 +2,7 @@
 
 
 
-Scenario: Add an Employee
+Scenario: Add Employees to database
 	Given I have the following employees:
 	| Id | FullName  | Age | Salary |
 	| 1  | Nadensaba | 27  | 400    |

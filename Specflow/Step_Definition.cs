@@ -22,7 +22,7 @@ namespace Specflow
 
 
         [Given(@"I have the following employees:")]
-        public void GivenIHaveTheFollowingEmployee(Table table)
+        public void StoreEmployees(Table table)
         {
             var eService = new EmployeeService();
             _requestContext.EmployeeModel = eService.CreateEmployee(table);            
@@ -38,7 +38,7 @@ namespace Specflow
         }
 
         [Then(@"I delete employees from the database")]
-        public void ThenIDeleteEmployeesFromTheDatabase()
+        public void DeleteEmployees()
         {
             var restService = new RestService();            
         }
