@@ -85,20 +85,20 @@ this.ScenarioInitialize(scenarioInfo);
                         "Salary"});
             table1.AddRow(new string[] {
                         "1",
-                        "Georgee",
+                        "Nadensaba",
                         "27",
                         "400"});
             table1.AddRow(new string[] {
                         "2",
-                        "Nicola",
+                        "Shaun",
                         "28",
                         "200"});
 #line 6
- testRunner.Given("I have the following employee:", ((string)(null)), table1, "Given ");
+ testRunner.Given("I have the following employees:", ((string)(null)), table1, "Given ");
 #line 10
  testRunner.When("I post employee to the api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("I verify that the request was successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I delete employees from the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

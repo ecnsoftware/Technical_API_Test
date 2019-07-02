@@ -16,7 +16,6 @@ namespace Models
         public string Salary { get; set; }
         [JsonProperty(PropertyName = "age")]
         public string Age { get; set; }
-       // [JsonIgnore]
         public string Id { get; set; }
 
     }
