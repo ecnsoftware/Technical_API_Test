@@ -28,31 +28,19 @@ namespace Specflow
             _requestContext.EmployeeModel = eService.CreateEmployee(table);            
         }
 
-        [When(@"I post employee to the api")]
-        public void WhenIPostEmployeeToTheApi()
+        [When(@"I add employees to the database")]
+        public void AddEmployees()
         {
             var restService = new RestService();
             var helper = new StepDefinitionHelper();
             List<Employee> employees = new List<Employee>();
-            foreach (var emp in _requestContext.EmployeeModel)
-            {
-                var response = restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp), EndPoints.CreateEmployeeEndpoint);
-                Assert.That(response.IsSuccessful);
-                var deserialized = helper.DeserializeJsonToObject<Employee>(response);
-                employees.Add(deserialized);
-            }
-            _responseContext.EmployeeModel = employees;
+            
         }
 
         [Then(@"I delete employees from the database")]
         public void ThenIDeleteEmployeesFromTheDatabase()
         {
-            var restService = new RestService();
-            foreach (var emp in _responseContext.EmployeeModel)
-            {
-                var response = restService.DeleteEmployee(emp.Id, EndPoints.DeleteEmployeeEndpoint);
-                Assert.That(response.IsSuccessful);
-            }
+            var restService = new RestService();            
         }
 
     }

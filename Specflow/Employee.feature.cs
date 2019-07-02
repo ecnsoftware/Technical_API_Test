@@ -96,7 +96,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have the following employees:", ((string)(null)), table1, "Given ");
 #line 10
- testRunner.When("I post employee to the api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I add employees to the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
  testRunner.Then("I delete employees from the database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
