@@ -36,7 +36,6 @@ namespace Specflow
             List<Employee> employees = new List<Employee>();
             foreach (var request in _requestContext.EmployeeModel)
             {
-                var json = request.ToJSON();
                 var response = restService.MakePostRequest(RestServiceHelper.BuildJsonObject(request), EndPoints.CreateEmployeeEndpoint);
                 Assert.That(response.IsSuccessful);
                 var deserialize = helper.DeserializeJsonToObject<Employee>(response);
