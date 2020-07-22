@@ -18,7 +18,7 @@ namespace Specflow
         private static IEnumerable<Employee> _employees;
         private static bool isSuccessfull;
 
-        [Given(@"I have the following employee:")]
+        [Given(@"I have the following employees:")]
         public void GivenIHaveTheFollowingEmployee(Table table)
         {
             var eService = new EmployeeService();
@@ -31,14 +31,12 @@ namespace Specflow
         {
             var restService = new RestService();
             var helper = new StepDefinitionHelper();
+
             foreach (var emp in _employees)
              {
-               var deserialized = helper.DeserializeJsonToObject<Employee>(restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp)));
-               var response = restService.DeleteEmployee(deserialized.Id);
+                var response = restService.MakePostRequest(RestServiceHelper.BuildJsonObject(emp));         
                 isSuccessfull = response.IsSuccessful;
-
-            }
-            
+            }            
         }
 
         [Then(@"I verify that the request was successful")]

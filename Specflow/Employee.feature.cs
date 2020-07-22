@@ -70,10 +70,10 @@ namespace Specflow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add an Employee")]
-        public virtual void AddAnEmployee()
+        [NUnit.Framework.DescriptionAttribute("Add Employees")]
+        public virtual void AddEmployees()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an Employee", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Employees", null, ((string[])(null)));
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -84,17 +84,17 @@ this.ScenarioInitialize(scenarioInfo);
                         "Age",
                         "Salary"});
             table1.AddRow(new string[] {
-                        "1",
-                        "Georgee",
+                        "106",
+                        "Jaykee",
                         "27",
                         "400"});
             table1.AddRow(new string[] {
-                        "2",
-                        "Nicola",
+                        "107",
+                        "Lucky",
                         "28",
                         "200"});
 #line 6
- testRunner.Given("I have the following employee:", ((string)(null)), table1, "Given ");
+ testRunner.Given("I have the following employees:", ((string)(null)), table1, "Given ");
 #line 10
  testRunner.When("I post employee to the api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
